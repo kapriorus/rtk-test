@@ -1,0 +1,10 @@
+<div *ngFor="let item of logArray">
+  {{item}}
+</div>
+<div *ngIf="logArray.length === 0">
+  Тут пока пусто :(
+</div>
+<button class="btn btn-link"
+  (click)="clearHistory()"
+  *ngIf="logArray.length > 0"
+>Очистить историю</button>

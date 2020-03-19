@@ -1,0 +1,27 @@
+.main {
+    &__filter {
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+
+        & > div {
+          margin-right: 15px;
+        }
+    }
+
+    &__content {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: space-between;
+      margin: 0 -5px;
+    }
+
+    &__item {
+      background-color: #2ecc71;
+      color: #fff;
+      text-align: center;
+      flex: 1 1 calc(33.3% - 10px);
+      padding: 15px;
+      margin: 5px;
+    }
+}

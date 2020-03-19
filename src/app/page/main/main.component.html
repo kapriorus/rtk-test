@@ -1,0 +1,45 @@
+<div class="main">
+    <div class="main__filter">
+        <div class="main__inputGroup">
+          <input type="number"
+            class="form-control"
+            name="numberOfElements"
+            placeholder="Enter number of items"
+            [(ngModel)]="filterData.numberOfElements"
+            (change)="onDataChange($event)"
+          />
+        </div>
+
+
+        <div class="form-check">
+          <input type="checkbox"
+            name="odd"
+            class="form-check-input"
+            [(ngModel)]="filterData.showOdd"
+            (change)="onDataChange($event)"
+          />
+          <label class="form-check-label" for="odd">Нечетные</label>
+        </div>
+
+
+        <div class="form-check">
+          <input type="checkbox"
+            name="even"
+            class="form-check-input"
+            [(ngModel)]="filterData.showEven"
+            (change)="onDataChange($event)"
+          />
+          <label class="form-check-label" for="even">Четные</label>
+        </div>
+    </div>
+
+    <div class="main__content" *ngIf="items.length > 0">
+        <div class="main__item" *ngFor="let item of items">
+          {{item}}
+        </div>
+    </div>
+
+    <div class="main__empty" *ngIf="items.length === 0">
+      Тут пока пусто :(
+    </div>
+</div>
